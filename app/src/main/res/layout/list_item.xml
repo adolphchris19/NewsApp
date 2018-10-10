@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardElevation="@dimen/elevation"
+    android:padding="@dimen/activity_vertical_margin"
+    card_view:cardCornerRadius="@dimen/card_corner_radius">
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:background="@color/colorPrimary"
+                android:id="@+id/article_title"
+                android:layout_width="match_parent"
+                android:padding="@dimen/padding_bottom_4"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/two_dip"
+                android:layout_marginBottom="@dimen/two_dip"
+                android:layout_marginLeft="@dimen/two_dip"
+                android:layout_marginStart="@dimen/two_dip"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp22"
+                tools:text="@string/title"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_margin_8"
+                android:layout_marginTop="@dimen/layout_margin_4">
+                <TextView
+                    android:id="@+id/author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/article_image"
+                    android:layout_toLeftOf="@id/article_image"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/padding_bottom_4"
+                    android:layout_marginLeft="@dimen/padding_bottom_4"
+                    android:textSize="@dimen/sp16"
+                    android:padding="@dimen/padding_bottom_4"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    tools:text="@string/name"/>
+                <ImageView
+                    android:id="@+id/article_image"
+                    android:layout_width="@dimen/thumbnail_image_width"
+                    android:layout_height="@dimen/thumbnail_image_height"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/app_name"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layout_margin_8">
+                <TextView
+                    android:id="@+id/article_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_bottom_4"
+                    android:textColor="@color/color_date_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/share_image_card"
+                    android:textStyle="italic"
+                    android:layout_toStartOf="@+id/share_image_card"
+                    tools:text="@string/time" />
+                <ImageView
+                    android:id="@+id/share_image_card"
+                    android:layout_width="@dimen/image_share"
+                    android:layout_height="@dimen/image_share"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/layout_margin"
+                    android:layout_marginRight="@dimen/layout_margin"
+                    android:contentDescription="@string/image_des_ic_share"
+                    android:src="@drawable/ic_share_black_24dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:layout_marginLeft="@dimen/nav_header_vertical_spacing"
+    android:layout_marginRight="@dimen/nav_header_vertical_spacing">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/nav_header_vertical_spacing"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:scrollbars="vertical"/>
+
+    <ImageView
+        android:id="@+id/no_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/no_data"
+        android:layout_marginBottom="@dimen/padding"
+        android:visibility="gone"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone"
+        android:textAlignment="center"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleX="0.10"
+        android:scaleY="0.10"
+        android:visibility="visible"/>
+</RelativeLayout>
